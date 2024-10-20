@@ -20,3 +20,20 @@ const myfunc = function () {
 
 console.log(typeof myfunc); //-->function
 console.log(typeof a);
+
+let user1 = "khushirawat";
+let user2 = user1;
+user2 = "khushi";
+console.log(user1);
+console.log(user2);
+//primitve data types are call by value therefore no change is made to user1
+
+let fun1 = {
+  name: "sarthak",
+  age: 12,
+};
+let fun2 = fun1;
+fun2.name = "gaurav";
+console.log(fun1);
+console.log(fun2);
+// non primitves are call by reference therefore fun1 gets modified by chanes in fun2
