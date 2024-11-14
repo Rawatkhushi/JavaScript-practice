@@ -85,3 +85,25 @@ const users = [
     email: "abc@gmail.com",
   },
 ];
+
+//DESTRUCTURING  OF OBJECTS
+
+const course = {
+  coursename: "js",
+  price: 500,
+  course_review: "good",
+};
+//course.coursename
+
+const { coursename } = course; //instead of writing course.coursename again and again
+console.log(coursename);
+
+const { course_review: review } = course; //initializing course_review as review
+console.log(review);
+
+// JSON-format
+// {
+//     "name" : "khushi",
+//     "surname" : "rawat",
+//     "age" : 20
+// }
