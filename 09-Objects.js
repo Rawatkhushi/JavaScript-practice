@@ -41,3 +41,47 @@ jsuser.greeting2 = function () {
   console.log(`Hello there, ${this.name}`);
 };
 console.log(jsuser.greeting2()); //anonyous function
+
+//OBJECTS-2
+
+//const tinderuser = new Object(); //returns empty object {}-singleton object
+const tinderuser = {}; //returns empty object {}-a non singleton object
+tinderuser.email = "abc123@gmail.com";
+tinderuser.name = "khushi";
+tinderuser.isLoggedIn = false;
+
+console.log(tinderuser);
+console.log(Object.keys(tinderuser)); //[ 'email', 'name', 'isLoggedIn' ]
+console.log(Object.values(tinderuser)); //[ 'abc123@gmail.com', 'khushi', false ]
+console.log(Object.entries(tinderuser)); //[ [ 'email', 'abc123@gmail.com' ],[ 'name', 'khushi' ],[ 'isLoggedIn', false ] ]
+console.log(tinderuser.hasOwnProperty("surname")); //false
+
+const regularUser = {
+  email: "abc123@gmail.com",
+  fullname: {
+    user_fullname: {
+      firstname: "khushi",
+      lastname: "rawat",
+    },
+  },
+};
+console.log(regularUser.fullname.user_fullname.lastname); //accessing objects inside objects
+
+const obj1 = {
+  1: "a",
+  2: "b",
+};
+const obj2 = {
+  3: "a",
+  4: "b",
+};
+//const obj3 = Object.assign({}, obj1, obj2); //merging  two objects
+const obj3 = { ...obj1, ...obj2 }; //merging two objects through spread operator
+console.log(obj3);
+
+const users = [
+  {
+    id: 1,
+    email: "abc@gmail.com",
+  },
+];
