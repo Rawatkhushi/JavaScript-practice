@@ -10,7 +10,7 @@ const x = 637849573622638495054n; //'n' is used for declaring BigInt
 const y = ["khushi", "rawat"]; //declaring an array
 
 let obj = {
-  name: "khushi", //alues inside curly braces are objects(be it number, string, arrays or anything else)
+  name: "khushi", //values inside curly braces are objects(be it number, string, arrays or anything else)
   age: 20,
 };
 
@@ -19,13 +19,13 @@ const myfunc = function () {
 };
 
 console.log(typeof myfunc); //-->function
-console.log(typeof a);
+console.log(typeof a); //-->symbol
 
 let user1 = "khushirawat";
 let user2 = user1;
 user2 = "khushi";
-console.log(user1);
-console.log(user2);
+console.log(user1); //-->khushirawat
+console.log(user2); //-->khushi
 //primitve data types are call by value therefore no change is made to user1
 
 let fun1 = {
@@ -34,6 +34,6 @@ let fun1 = {
 };
 let fun2 = fun1;
 fun2.name = "gaurav";
-console.log(fun1);
-console.log(fun2);
-// non primitves are call by reference therefore fun1 gets modified by chanes in fun2
+console.log(fun1); //-->name:gaurav, age:12
+console.log(fun2); //-->name:gaurav, age:12
+// non primitves are call by reference therefore fun1 gets modified by changes in fun2

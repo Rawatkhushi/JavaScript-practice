@@ -17,9 +17,6 @@ const jsuser = {
 console.log(jsuser.email); //accessing elements
 console.log(jsuser["email"]); //another method to access
 
-// console.log(jsuser.surname);//surname not defined
-console.log(jsuser["surname"]);
-
 console.log(jsuser[mySym]); //we have included symbol as a key in object but it has not been used correctly
 console.log(typeof jsuser[mySym]); //its output is string not Symbol
 console.log(jsuser); //here type of mySym in Symbol
@@ -34,13 +31,13 @@ console.log(jsuser["name"]);
 jsuser.greeting = function () {
   console.log("hello, there!");
 };
-console.log(jsuser.greeting); //anonyous function
+console.log(jsuser.greeting); //anonymous function
 console.log(jsuser.greeting());
 
 jsuser.greeting2 = function () {
   console.log(`Hello there, ${this.name}`);
 };
-console.log(jsuser.greeting2()); //anonyous function
+console.log(jsuser.greeting2()); //anonymous function
 
 //OBJECTS-2
 

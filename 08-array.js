@@ -4,7 +4,7 @@ const myarr2 = new Array(1, 2, 3, 4, 5, 6); //declaration 2
 console.log(myarr[0]); //accessing elements
 
 //shallow copy- copies that share the same reference (original copy gets affected with any change)
-//deep copy- copies that dn't share the same reference (files remains unaffected)
+//deep copy- copies that don't share the same reference (files remains unaffected)
 
 const myarr3 = new Array(1, 2, 7, "khushi");
 console.log(myarr3[3]);
@@ -63,7 +63,12 @@ console.log(cc.flat(1)); //only converts upto 1 degree
 console.log(Array.isArray(myarr)); //true-returns true if it is an array
 console.log(Array.from("khushi")); //[ 'k', 'h', 'u', 's', 'h', 'i' ] converts passed parameter into array
 
+const obj = {
+  name: "vaishali",
+  class: 20,
+};
 console.log(Array.from({ name: "khushi" })); //[]
+console.log(Array.from(Object.values(obj))); //['vaishali','20']
 
 let ab = 100;
 let b = 200;
