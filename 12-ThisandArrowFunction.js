@@ -44,7 +44,7 @@ console.log(add2(2, 3));
 
 //or
 
-const add2 = (num1, num2) => (num1 + num2);
-console.log(add2(2, 3));
+const add3 = (num1, num2) => num1 + num2;
+console.log(add3(2, 3));
 
 //curly braces m wrap krke return keyword likhna pdega, but with parenthesis it is not used
