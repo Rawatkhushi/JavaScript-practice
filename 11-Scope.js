@@ -33,8 +33,7 @@ one(); //-->vanshika
 
 //same scope concept can be extended to if-else as well
 
------------hoisting intro-----------
-
+// -----------hoisting intro-----------
 
 //method-1 for functions
 
@@ -50,4 +49,3 @@ console.log(add2(4)); //error: Cannot access 'add2' before initialization
 const add2 = function (num) {
   return num + 2;
 };
-
