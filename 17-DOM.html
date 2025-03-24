@@ -1,4 +1,4 @@
-<!-- on browser 
+<!-- on console 
 console.log(window)
 console.log(window.document)
 console.log(document)
@@ -9,11 +9,84 @@ console.dir(document) -->
   <head>
     <meta charset="UTF-8" />
     <title>DOM</title>
+    <style>
+      * {
+        background-color: #212121;
+        color: #fff;
+      }
+    </style>
   </head>
   <body>
-    <div class="bg-color">
-      <h2>dom manipulation</h2>
-      <p>heloooo</p>
+    <div>
+      <h2 id="heading" class="para1">
+        dom manipulation<span style="display: none"> test text </span>
+      </h2>
+      <p id="paragraph" class="para2">heloooo</p>
+      <h2 class="para3" id="heading2">third para</h2>
+      <input type="password" />
+      <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+      </ul>
     </div>
   </body>
 </html>
+
+<!-- GET ELEMENT BY
+document.getElementById('heading')
+document.getElementById('heading').id
+document.getElementById('heading').className
+document.getElementById('heading').getAttribute('id')
+document.getElementById('heading').getAttribute('class')
+document.getElementById('heading').setAttribute('class','test')
+title.style.backgroundColor = 'green'
+title.style.padding = '40px'
+title.style.borderRadius = '25px'
+title.textContent
+>>>'dom manipulation'
+title.innerHTML
+>>>'dom manipulation'
+title.innerText
+>>>'dom manipulation' -->
+
+<!-- DIFFERENCE BETWEEN innerHTML, textContent, innerText
+const title = document.getElementById('heading')
+title.textContent
+>>>'\n        dom manipulation test text \n      '
+title.innerText
+>>>'dom manipulation'
+title.innerHTML
+>>>'\n        dom manipulation<span style="display: none"> test text </span>\n      ' 
+
+innertext- shows just the text in that tag
+textContent- shows all the content in the inner tags too
+innerHTML- shows the text along with the HTML used-->
+
+<!-- QUERY SELECTOR
+document.querySelector('h2')    gives the first occurence
+>>><h2 id=​"heading" class=​"para1">​…​</h2>​
+document.querySelector("#heading2")
+>>><h2 class=​"para3" id=​"heading2">​third para​</h2>​
+document.querySelector('.para2')
+>>>p id=​"paragraph" class=​"para2">​heloooo​</p>​
+
+document.querySelectorAll('h2')    gives all the occurences
+>>>NodeList(2) [h2#heading.para1, h2#heading2.para3] -->
+
+<!-- MISCELLANEOUS
+document.querySelector('input[type = "password"]')
+>>><input type=​"password">​
+document.querySelector('p:first-child') -->
+
+<!-- document.querySelector('ul')
+>>><ul>​…​</ul>​<li>​::marker​"one"</li>​<li>​…​</li>​<li>​…​</li>​</ul>​
+const myul=document.querySelector('ul')
+>>>undefined
+myul.querySelector('li')
+>>><li>​…​</li>​::marker​"one"</li>​
+const turnblue = document.querySelector('li')
+>>>undefined
+
+turnblue.style.backgroundColor = "blue"
+>>>'blue'  turned blue-->
