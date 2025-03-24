@@ -25,9 +25,9 @@ console.dir(document) -->
       <h2 class="para3" id="heading2">third para</h2>
       <input type="password" />
       <ul>
-        <li>one</li>
-        <li>two</li>
-        <li>three</li>
+        <li class="list-item">one</li>
+        <li class="list-item">two</li>
+        <li class="list-item">three</li>
       </ul>
     </div>
   </body>
@@ -87,6 +87,42 @@ myul.querySelector('li')
 >>><li>​…​</li>​::marker​"one"</li>​
 const turnblue = document.querySelector('li')
 >>>undefined
-
 turnblue.style.backgroundColor = "blue"
 >>>'blue'  turned blue-->
+
+<!-- OPERATING ON NODELIST 
+const blah = document.querySelectorAll('li')
+>>>undefined
+blah
+>>>NodeList(3) [li, li, li]
+blah.style.backgroundColor = "green"
+>>>VM5586:1 Uncaught TypeError: Cannot set properties of undefined (setting 'backgroundColor') at <anonymous>:1:28
+(anonymous) @ VM5586:1Understand this errorAI          this error is because a nodelist is similar to array but not an array
+blah[0].style.backgroundColor = "green"
+>>>'green'     this is how you modify the first element-->
+
+<!-- FOREACH ON NODELIST
+document.querySelectorAll('li')
+>>>undefined
+myul.fo
+>>>undefined
+myul.forEach((l)=> {
+    l.style.backgroundColor = "blue"
+} )  -->
+
+<!-- LOOPING ON HTML COLLECTION
+const temp = document.getElementsByClassName("list-item")
+>>>undefined
+temp
+>>>HTMLCollection(3) [li.list-item, li.list-item, li.list-item]
+temp.forEach(  (l) => {
+    console.log(l)
+})
+>>>VM8580:1 Uncaught TypeError: temp.forEach is not a function at <anonymous>:1:6     This error is because html collections has no forEach function
+const convertedarr = Array.from(temp)      conversion into array first
+>>>undefined
+convertedarr
+>>>(3) [li.list-item, li.list-item, li.list-item]
+convertedarr.forEach( (li) => {
+    li.style.backgroundColor = "brown"
+}) -->
