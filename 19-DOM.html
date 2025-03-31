@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Final hopefully</title>
+  </head>
+  <body style="background-color: #212121; color: #fff; font-size: 40px">
+    <ul class="language">
+      <li>Java</li>
+    </ul>
+    <br />
+    <ul class="weekdays">
+      <li>sunday</li>
+      <li>monday</li>
+    </ul>
+    <script>
+      //adding function
+      function addLanguage(langname) {
+        const li = document.createElement("li");
+        li.innerHTML = `${langname}`;
+        document.querySelector(".language").appendChild(li);
+      }
+      addLanguage("Python");
+      addLanguage("JavaScript");
+      addLanguage("Ruby");
+
+      //alternate method -optimized
+      function optimalFunct(week) {
+        const li = document.createElement("li");
+        const addDay = document.createTextNode(week);
+        li.appendChild(addDay);
+        document.querySelector(".weekdays").appendChild(li);
+      }
+
+      optimalFunct("tuesday");
+      optimalFunct("wednesday");
+      optimalFunct("thursday");
+
+      //editing
+      const secondLang = document.querySelector("li:nth-child(2)");
+      console.log(secondLang);
+      const newli = document.createElement("li");
+      newli.textContent = "mojo";
+      secondLang.replaceWith(newli);
+
+      //remove
+      const lastele = document.querySelector("li:nth-child");
+      lastele.remove9;
+    </script>
+  </body>
+</html>
