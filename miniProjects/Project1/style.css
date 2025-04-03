@@ -1,0 +1,28 @@
+.button {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000;
+  margin: 8px;
+}
+
+#lightgrey {
+  background-color: lightgrey;
+}
+#lightcoral {
+  background-color: lightcoral;
+}
+#lightgreen {
+  background-color: lightgreen;
+}
+#lightblue {
+  background-color: lightblue;
+}
+* {
+  text-align: center;
+}
+button {
+  height: 40px;
+  width: 100px;
+  font-size: 23px;
+}
