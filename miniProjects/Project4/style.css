@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+h2 {
+  font-weight: normal;
+  color: #34495e;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+#guess {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#guessfield {
+  padding: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.guesssubmit {
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.resultParas {
+  margin-top: 20px;
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.resultParas p {
+  margin: 10px 0;
+}
