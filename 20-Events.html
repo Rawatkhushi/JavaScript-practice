@@ -47,43 +47,49 @@
       //clientX, clientY, screenX, screenY
       //altkey, ctrlkey, shiftkey, keycode
 
-      // document.getElementById("roses").addEventListener(
-      //   "click",
-      //   function (e) {
-      //     console.log(e);
-      //   },
-      //   false
-      // );
+      document.getElementById("roses").addEventListener(
+        "click",
+        function (e) {
+          console.log(e);
+        },
+        false
+      );
 
-      // //event propagation, bubbling,
-      // document.getElementById("images").addEventListener(
-      //   "click",
-      //   function (e) {
-      //     console.log("clicked inside the ul");
-      //   },
-      //   true
-      // );
-      // document.getElementById("roses").addEventListener(
-      //   "click",
-      //   function (e) {
-      //     console.log("roses clicked");
-      //     e.stopPropagation();
-      //   },
-      //   true
-      // );
-      // //clicked inside the ul
-      // //roses clicked
+      //event propagation
+      //capturing phase - dom tree top to down
+      //bubbling - target element up to the root
+      //true - capturing phase
+      //false / default - bubbling
+      //stopPropagation() - stops bubbling or capturing
+      document.getElementById("images").addEventListener(
+        "click",
+        function (e) {
+          console.log("clicked inside the ul");
+        },
+        true
+      );
+      document.getElementById("roses").addEventListener(
+        "click",
+        function (e) {
+          console.log("roses clicked");
+          e.stopPropagation();
+        },
+        true
+      );
+      //clicked inside the ul
+      //roses clicked
 
-      // document.getElementById("google").addEventListener(
-      //   "click",
-      //   function (e) {
-      //     console.log("google clicked");
+      //preventDefault() - Prevents the default browser behavior associated with the event.
+      document.getElementById("google").addEventListener(
+        "click",
+        function (e) {
+          console.log("google clicked");
 
-      //     e.preventDefault();
-      //     e.stopPropagation();
-      //   },
-      //   false
-      // );
+          e.preventDefault();
+          e.stopPropagation();
+        },
+        false
+      );
 
       //removing the picture on click
 
