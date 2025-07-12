@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 1</title>
+  </head>
+  <body>
+    <h1>Khushi Rawat</h1>
+    <button id="button">stop</button>
+  </body>
+  <script>
+    //console will print khushi after 3 seconds
+    const fun1 = function () {
+      console.log("khushi");
+    };
+    setTimeout(fun1, 3000);
+
+    // h1 text will be changed after 2 seconds intervals
+    const fun2 = function () {
+      document.querySelector("h1").innerHTML = "Wow, it changed";
+    };
+    setInterval(fun2, 2000);
+
+    //how to stop a setTimeout() by event listeners
+    const fun2 = function () {
+      document.querySelector("h1").innerHTML = "Wow, it changed";
+    };
+    const textChanged = setTimeout(fun2, 5000);
+
+    document.querySelector("#button").addEventListener("click", function () {
+      clearInterval(textChanged);
+      console.log("Stopped!");
+    });
+  </script>
+</html>
